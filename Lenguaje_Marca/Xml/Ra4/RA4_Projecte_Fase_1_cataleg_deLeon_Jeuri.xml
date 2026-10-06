@@ -115,6 +115,7 @@
                 <Valoracion>9.3</Valoracion>
                 <Stock>12</Stock>
                 <Fecha>1999-01-31</Fecha>
+                <Descripcion>Una experiencia de terror que combina elementos de puzle y acción en un entorno gótico.</Descripcion>
             </Juego>
 
             <Juego id="RET-007">
