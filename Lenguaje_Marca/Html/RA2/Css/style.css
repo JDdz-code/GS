@@ -1,11 +1,11 @@
-*{
+/* *{
     margin: 0;
-
+    padding: 0;
 }
 
 header{ 
     height: 90px;
-    background-color: #c6c6be;
+    background-color: #a3a39f;
     display: flex;
     align-items: center;
 }
@@ -34,21 +34,34 @@ nav ul{
 }
 
 nav a{
-   color: azure;
+   color: rgb(0, 0, 0);
     text-decoration: none;
     font-weight: bold;
     font-size: 17px;
-    /* border: solid; */
+ border: solid; 
 
 }
 
+#blog h1{
+ font-size: 45px;
+ text-align: center;
+}
 #blog{
-    background-color: brown;
+    background-color: white;
+    justify-content: center;
+
 }
 
+#blog p{
+    background-color: white;
+    text-align: center;
+    width: 50%;
+    padding-left: 25%;
+
+}
 
 #Catalogo{
-background-color: aquamarine;
+    background-color: rgb(255, 255, 255);
     display: flex;
     flex-wrap: wrap;
     gap: 30px;
@@ -61,4 +74,18 @@ background-color: aquamarine;
     text-align: center;
 }
 
+#blog {
+   border: solid 2px;
+   width: 100%;
+   text-align: center;
 
+}
+
+#img_tienda{
+    width: 100%;
+
+} */
+
+/* table, thead, tr, th{
+    border: solid 1px;
+} */
