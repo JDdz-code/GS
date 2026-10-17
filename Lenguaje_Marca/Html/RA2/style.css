@@ -1,14 +1,32 @@
 *{
     margin: 0;
+      box-sizing: border-box;
+
 
 }
 
 header{ 
     height: 90px;
-    background-color: #c6c6be;
+    background: linear-gradient(90deg, #bed4c8 0%, #119e49 55%, #01240e 100%);
+    border-bottom: 3px solid #4ade80;
     display: flex;
     align-items: center;
+    position: sticky;
+     top: 0;
+    z-index: 1000;
 }
+
+
+
+
+body {
+    background: linear-gradient(180deg, #0b1f14 0%, #111827 100%);
+    background-attachment: fixed;
+    color: #e5f5ea;
+
+    font-family: 'Share Tech Mono', 'Courier New', monospace;
+}
+
 
 
 nav{
@@ -16,7 +34,7 @@ nav{
     justify-content: space-between;
     align-items: center;
     width: 100%;
-    padding: 0 40px;
+    padding: 0 50px;
     box-sizing: border-box;
 }
 
@@ -27,7 +45,7 @@ nav{
 
 nav ul{
     display: flex;
-    gap: 10px;
+    gap: 40px;
     list-style: none;
     margin: 0;
     padding: 0;
@@ -42,23 +60,249 @@ nav a{
 
 }
 
-#blog{
-    background-color: brown;
-}
 
 
 #Catalogo{
-background-color: aquamarine;
-    display: flex;
-    flex-wrap: wrap;
-    gap: 30px;
+    margin-top: 45px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 40px;
+    /* padding-left: 2%;
+    padding-right: 2%; */
+     margin: 2%;
     
 }
 
 .card_juegos{
     margin-top: 20px;
-    border: solid 2px;
     text-align: center;
+    height: 250px;
+
+    
 }
 
 
+.card_juegos img {
+    width: 250px;
+    height: 120px;
+    object-fit: contain;
+    
+}
+
+
+main{
+    height:800px;
+    width: 100%;
+    /* padding-left: 2%;
+    padding-right: 2%; */
+
+}
+
+#blog{
+    width: 60%;
+}
+
+#blog h1{
+    font-size: 45px;
+    padding-left: 80px;
+    padding-top: 50px;
+
+}
+/* main h3{
+    font-size: 45px;
+    padding-left: 80px;
+    padding-top: 50px;
+
+} */
+/* #blog h2{
+    font-size: 35px;
+    padding-left: 80px;
+    padding-top: 50px;} */
+
+#blog p{
+    padding-left: 80px;
+    padding-top: 7px;
+    font-size: 20px; 
+
+}
+
+
+table{
+    justify-content: center;
+    text-align: center;
+    background-color: #2a674579;
+    border: solid 2px #4ade80;
+    /* height: 40%; */
+    width: 30%; 
+     /* margin-top: 5%;   */
+}
+
+table th{
+    border: #119e49 solid 2px;
+    padding: 10px;
+}
+
+table td{
+    border: #119e49 solid 2px;
+    padding:2px;
+}
+
+#tabla_imagem{
+    display: flex;
+    gap: 20px;
+    display: flex;
+    justify-content: center;
+}
+
+
+#img_tienda{
+     width:60%;
+     height:600px;
+     border: solid 3px #4ade80b6 ;
+
+}
+
+#titulo2{
+    text-align:center;
+    font-size: 40px;
+    padding-top: 200px;
+}
+
+.linea_division{
+    border: solid #4ade80 2px;
+    margin: 2%;
+
+}
+
+#contact_form{
+    height:800px;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+}
+
+form{
+    width:450px;
+   
+}
+
+fieldset{
+   border: 1px solid #4ade80;
+   display: flex;
+   flex-direction: column;
+   border-radius: 8px;
+   padding: 15px;
+   text-align: left;
+   
+
+}
+
+#contact_form legend{
+    padding: 0;
+    color: #4ade80;
+    text-align: left;
+}
+
+#contact_form input,
+textarea
+{
+    padding: 8px;
+    border-radius: 4px;
+    border: 3px solid #14532d;
+}
+#contact_form input[type="submit"] {
+    background: #14532d;
+    color: #fff;
+    cursor: pointer;}
+
+#contact_form input[type="submit"]:hover {
+    background: #22c55e;
+}
+
+.btn_vermas{
+    display: inline-block;
+    background: #22c55e;
+    color: #0b1f14;
+    text-decoration: none;
+    border-radius: 4px;
+    width: 100px;
+}
+
+.info_juego {
+    padding-left: 180px;
+    max-width: 1200px;
+    line-height: 1.6;
+    font-size: 20px;
+}
+.info_juego h3 {
+    color: #4ade80;
+    margin-top: 24px;
+}
+
+@media (max-width: 600px)
+ {
+    header {
+         height: auto;
+          min-height: 90px;
+     }
+    nav ul {
+        flex-wrap: wrap;
+         justify-content: center;
+        gap: 12px; }
+    main {
+        height: auto;
+     }
+    #blog {
+         width: 100%;
+        
+        }
+    #blog h1, #blog p { 
+        padding-left: 20px;
+         padding-right: 20px;
+        
+        }
+    #blog h1 {
+        font-size: 34px;
+    
+    }
+    #tabla_imagem { 
+        flex-direction: column;
+        padding: 0 16px;
+         
+    }   
+    #img_tienda{ 
+        
+        width: 100%;
+    
+    }
+    
+    #tabla_imagem table {
+        
+        width: 100%; 
+    
+    }
+    #tabla_imagem iframe{
+        width: 100%;
+    }
+
+    #img_tienda { 
+        height: auto;
+    
+    }
+    #Catalogo {
+        grid-template-columns: 1fr;
+     
+    }
+
+    #titulo2 { 
+        padding-top: 80px;
+    }
+    .info_juego { 
+        padding-right: 20px;
+        padding-left: 20px;
+        font-size: 17px;
+
+}
+
+}
