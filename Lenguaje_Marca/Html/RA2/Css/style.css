@@ -24,6 +24,7 @@ body {
     background-attachment: fixed;
     color: #e5f5ea;
 
+    
     font-family: 'Share Tech Mono', 'Courier New', monospace;
 }
 
@@ -59,7 +60,16 @@ nav a{
     /* border: solid; */
 
 }
-
+nav a:hover {
+    background: rgba(255, 255, 255, 0.15);
+    color: #fff;
+    border-radius: 6px;
+}
+.card_juegos:hover {
+    background: rgba(255, 255, 255, 0.15);
+    color: #fff;
+    border-radius: 6px;
+}
 
 
 #Catalogo{
@@ -76,14 +86,13 @@ nav a{
 .card_juegos{
     margin-top: 20px;
     text-align: center;
-    height: 250px;
+    height: 200px;
 
     
 }
 
-
 .card_juegos img {
-    width: 250px;
+    width: 300px;
     height: 120px;
     object-fit: contain;
     
@@ -108,6 +117,8 @@ main{
     padding-top: 50px;
 
 }
+
+
 /* main h3{
     font-size: 45px;
     padding-left: 80px;
@@ -125,7 +136,17 @@ main{
     font-size: 20px; 
 
 }
-
+footer{
+    width: 100%;
+    text-align: center;
+    font-size: 25px;
+    padding-top: 1rem;
+    border-bottom: #4ade80 2px solid;
+}
+footer p {
+    margin: 4px 0;
+    font-size: 0.9rem;
+}
 
 table{
     justify-content: center;
