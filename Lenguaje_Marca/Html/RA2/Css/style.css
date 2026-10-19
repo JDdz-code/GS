@@ -1,18 +1,18 @@
-*{
+* {
     margin: 0;
-      box-sizing: border-box;
+    box-sizing: border-box;
 
 
 }
 
-header{ 
+header {
     height: 90px;
     background: linear-gradient(90deg, #bed4c8 0%, #119e49 55%, #01240e 100%);
     border-bottom: 3px solid #4ade80;
     display: flex;
     align-items: center;
     position: sticky;
-     top: 0;
+    top: 0;
     z-index: 1000;
 }
 
@@ -24,13 +24,13 @@ body {
     background-attachment: fixed;
     color: #e5f5ea;
 
-    
+
     font-family: 'Share Tech Mono', 'Courier New', monospace;
 }
 
 
 
-nav{
+nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -39,12 +39,12 @@ nav{
     box-sizing: border-box;
 }
 
-#logo{
+#logo {
     list-style: none;
 
 }
 
-nav ul{
+nav ul {
     display: flex;
     gap: 40px;
     list-style: none;
@@ -52,19 +52,21 @@ nav ul{
     padding: 0;
 }
 
-nav a{
-   color: azure;
+nav a {
+    color: azure;
     text-decoration: none;
     font-weight: bold;
     font-size: 17px;
     /* border: solid; */
 
 }
+
 nav a:hover {
     background: rgba(255, 255, 255, 0.15);
     color: #fff;
     border-radius: 6px;
 }
+
 .card_juegos:hover {
     background: rgba(74, 222, 128, 0.15);
     color: #fff;
@@ -72,49 +74,51 @@ nav a:hover {
 }
 
 
-#Catalogo{
+#Catalogo {
     margin-top: 45px;
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     gap: 40px;
     /* padding-left: 2%;
     padding-right: 2%; */
-     margin: 2%;
-    
+    margin: 2%;
+
 }
 
-.card_juegos{
+.card_juegos {
     margin-top: 20px;
     text-align: center;
     height: 200px;
 
-    
+
 }
 
 .card_juegos img {
     width: 300px;
     height: 120px;
     object-fit: contain;
-    
+
 }
 
 
-main{
-    height:800px;
+main {
+    height: 800px;
     width: 100%;
     /* padding-left: 2%;
     padding-right: 2%; */
 
 }
-#contact_form input, textarea{
+
+#contact_form input,
+textarea {
     margin-bottom: 1rem;
 }
 
-#blog{
+#blog {
     width: 60%;
 }
 
-#blog h1{
+#blog h1 {
     font-size: 45px;
     padding-left: 80px;
     padding-top: 50px;
@@ -133,45 +137,47 @@ main{
     padding-left: 80px;
     padding-top: 50px;} */
 
-#blog p{
+#blog p {
     padding-left: 80px;
     padding-top: 7px;
-    font-size: 20px; 
+    font-size: 20px;
 
 }
-footer{
+
+footer {
     width: 100%;
     text-align: center;
     font-size: 25px;
     padding-top: 1rem;
     border-bottom: #4ade80 2px solid;
 }
+
 footer p {
     margin: 4px 0;
     font-size: 0.9rem;
 }
 
-table{
+table {
     justify-content: center;
     text-align: center;
     background-color: #2a674579;
     border: solid 2px #4ade80;
     /* height: 40%; */
-    width: 30%; 
-     /* margin-top: 5%;   */
+    width: 30%;
+    /* margin-top: 5%;   */
 }
 
-table th{
+table th {
     border: #119e49 solid 2px;
     padding: 10px;
 }
 
-table td{
+table td {
     border: #119e49 solid 2px;
-    padding:2px;
+    padding: 2px;
 }
 
-#tabla_imagem{
+#tabla_imagem {
     display: flex;
     gap: 20px;
     display: flex;
@@ -179,72 +185,73 @@ table td{
 }
 
 
-#img_tienda{
-     width:60%;
-     height:600px;
-     border: solid 3px #4ade80b6 ;
+#img_tienda {
+    width: 60%;
+    height: 600px;
+    border: solid 3px #4ade80b6;
 
 }
 
-#titulo2{
-    text-align:center;
+#titulo2 {
+    text-align: center;
     font-size: 40px;
     padding-top: 200px;
 }
 
-.linea_division{
+.linea_division {
     border: solid #4ade80 2px;
     margin: 2%;
 
 }
 
-#contact_form{
-    height:800px;
+#contact_form {
+    height: 800px;
     display: flex;
     justify-content: center;
     text-align: center;
     align-items: center;
 }
 
-form{
-    width:450px;
-   
-}
-
-fieldset{
-   border: 1px solid #4ade80;
-   display: flex;
-   flex-direction: column;
-   border-radius: 8px;
-   padding: 15px;
-   text-align: left;
-   
+form {
+    width: 450px;
 
 }
 
-#contact_form legend{
+fieldset {
+    border: 1px solid #4ade80;
+    display: flex;
+    flex-direction: column;
+    border-radius: 8px;
+    padding: 15px;
+    text-align: left;
+
+
+}
+
+#contact_form legend {
     padding: 0;
     color: #4ade80;
     text-align: left;
 }
 
 #contact_form input,
-textarea
-{
+textarea {
     padding: 17px;
     border-radius: 12px;
     border: 3px solid #14532d;
 }
+
 #contact_form input[type="submit"] {
     background: #14532d;
     color: #fff;
-    cursor: pointer;}
+    cursor: pointer;
+}
 
 #contact_form input[type="submit"]:hover {
     background: #22c55e;
 }
 
-.btn_vermas{
+.btn_vermas {
     display: inline-block;
     background: #22c55e;
     color: #0b1f14;
@@ -259,74 +266,86 @@ textarea
     line-height: 1.6;
     font-size: 20px;
 }
+
 .info_juego h3 {
     color: #4ade80;
     margin-top: 24px;
 }
 
-@media (max-width: 600px)
- {
+@media (max-width: 600px) {
     header {
-         height: auto;
-          min-height: 90px;
-     }
+        height: auto;
+        min-height: 90px;
+    }
+
     nav ul {
         flex-wrap: wrap;
-         justify-content: center;
-        gap: 12px; }
+        justify-content: center;
+        gap: 12px;
+    }
+
     main {
         height: auto;
-     }
+    }
+
     #blog {
-         width: 100%;
-        
-        }
-    #blog h1, #blog p { 
+        width: 100%;
+
+    }
+
+    #blog h1,
+    #blog p {
         padding-left: 20px;
-         padding-right: 20px;
-        
-        }
+        padding-right: 20px;
+
+    }
+
     #blog h1 {
         font-size: 34px;
-    
+
     }
-    #tabla_imagem { 
+
+    #tabla_imagem {
         flex-direction: column;
         padding: 0 16px;
-         
-    }   
-    #img_tienda{ 
-        
+
+    }
+
+    #img_tienda {
+
         width: 100%;
-    
+
     }
-    
+
     #tabla_imagem table {
-        
-        width: 100%; 
-    
+
+        width: 100%;
+
     }
-    #tabla_imagem iframe{
+
+    #tabla_imagem iframe {
         width: 100%;
     }
 
-    #img_tienda { 
+    #img_tienda {
         height: auto;
-    
+
     }
+
     #Catalogo {
         grid-template-columns: 1fr;
-     
+
     }
 
-    #titulo2 { 
+    #titulo2 {
         padding-top: 80px;
     }
-    .info_juego { 
+
+    .info_juego {
         padding-right: 20px;
         padding-left: 20px;
         font-size: 17px;
 
-}
+    }
 
 }
