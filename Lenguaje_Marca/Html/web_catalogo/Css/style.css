@@ -273,6 +273,33 @@ textarea {
     color: #4ade80;
     margin-top: 24px;
 }
+/* Modo claro: sobrescribe los colores del tema oscuro */
+body.modo-claro {
+  background-color: #f4f4f4;
+  color: #222;
+}
+
+body.modo-claro header,
+body.modo-claro footer {
+  background-color: #e0e0e0;
+  color: #222;
+}
+
+body.modo-claro a {
+  color: #0a4d8c;
+}
+
+body.modo-claro .card_juegos {
+  background-color: #ffffff;
+  border-color: #999;
+}
+
+body.modo-claro table th,
+body.modo-claro table td {
+  background-color: #ffffff;
+  color: #222;
+  border-color: #999;
+}
 
 @media (max-width: 1200px) {
     header {

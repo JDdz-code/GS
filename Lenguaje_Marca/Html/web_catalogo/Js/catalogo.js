@@ -206,3 +206,4 @@ filtroPlataforma.addEventListener("change", filtrarJuegos);
 
 // Al cargar la página se muestran todos los juegos
 mostrarJuegos(juegos);
+
