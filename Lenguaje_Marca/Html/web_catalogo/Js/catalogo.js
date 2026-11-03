@@ -51,7 +51,7 @@ const juegos = [
     plataforma: ["SNES", "Mega Drive", "Arcade"],
     precio: 39.00,
     valoracion: 9.9,
-    stock: 5,
+    stock: 4,
     imagen: "./Imagenes/img_caj5.png",
     descripcion: "Velocidad endiablada y los doce luchadores originales reunidos en el cartucho rey de los salones recreativos."
   },
@@ -90,52 +90,105 @@ const juegos = [
   }
 ];
 
+const TIPO_IVA = 21;
 
-const contenedor = document.querySelector("#Catalogo");
+function calculaPrecioConIva(precio) {
+  return precio + (precio * TIPO_IVA / 100);
+}
 
-// Recorre los juegos y crea una tarjeta por cada uno
-for (const juego of juegos) {
+const buscador = document.querySelector("#buscador");
+const filtroPlataforma = document.querySelector("#filtro-plataforma");
+const contador = document.querySelector("#contador");
+
+function crearTarjeta(juego) {
   const tarjeta = document.createElement("article");
-  tarjeta.classList.add("card_juegos");      
+  tarjeta.classList.add("card_juegos");
 
-  const titulo = document.createElement("h2");
+  const titulo = document.createElement("p");
   titulo.textContent = juego.titulo;
+  titulo.classList.add('titulo_caja_catalogo');
 
-  const imagen = document.createElement("img"); 
-  imagen.src = juego.imagen;                   
-  imagen.alt = "Img " + juego.titulo;            
+  const imagen = document.createElement("img");
+  imagen.src = juego.imagen;
+  imagen.alt = "Img " + juego.titulo;
 
-  const genero = document.createElement("h3");   
-  genero.textContent = juego.genero.join(" | ");  
+  const genero = document.createElement("h3");
+  genero.textContent = juego.genero.join(" | ");
 
   const precio = document.createElement("p");
-  precio.textContent = juego.precio.toFixed(2) +"€"
-  
+  precio.textContent = calculaPrecioConIva(juego.precio).toFixed(2) + "€";
 
   const valoracion = document.createElement("p");
-  valoracion.textContent = "Nota:"+ juego.valoracion
+  valoracion.textContent = "Nota:" + juego.valoracion;
 
   const stock = document.createElement("p");
-  stock.textContent = "stock:" + juego.stock
+  stock.classList.add("stock");
+  stock.textContent = "Stock: " + juego.stock;
+
+  if (juego.stock < 5) {
+    tarjeta.classList.add("stock-bajo");
+  }
+
+  if (juego.stock === 0) {
+    stock.textContent = "Agotado";
+  }
 
   const descripcion = document.createElement("p");
+  descripcion.textContent = juego.descripcion;
 
   const btn_ver = document.createElement("button");
-  btn_ver.classList.add("btn_vermas")
-  btn_ver.innerText ="Ver mas";
+  btn_ver.classList.add("btn_vermas");
+  btn_ver.textContent = "Ver mas";
 
- const plataforma = document.createElement("p");
+  const plataforma = document.createElement("p");
   plataforma.classList.add("plataforma");
-  plataforma.textContent =juego.plataforma.join(", ");
-  
+  plataforma.textContent = juego.plataforma.join(", ");
+
   tarjeta.appendChild(titulo);
-  tarjeta.appendChild(imagen);               
-  tarjeta.appendChild(genero);                  
-  tarjeta.appendChild(plataforma);                  
-  tarjeta.appendChild(precio);                  
-  tarjeta.appendChild(valoracion);                  
-  tarjeta.appendChild(stock);                  
-  tarjeta.appendChild(descripcion);                  
-  contenedor.appendChild(tarjeta);
-  tarjeta.appendChild(btn_ver);                  
+  tarjeta.appendChild(imagen);
+  tarjeta.appendChild(genero);
+  tarjeta.appendChild(plataforma);
+  tarjeta.appendChild(precio);
+  tarjeta.appendChild(valoracion);
+  tarjeta.appendChild(stock);
+  tarjeta.appendChild(descripcion);
+  tarjeta.appendChild(btn_ver);
+
+  return tarjeta;
 }
+
+function mostrarJuegos(lista) {
+  contenedor.textContent = "";
+
+  contador.textContent = "Mostrando " + lista.length + " de " + juegos.length + " juegos";
+
+  if (lista.length === 0) {
+    const mensaje = document.createElement("p");
+    mensaje.textContent = "No se ha encontrado ningún juego";
+    contenedor.appendChild(mensaje);
+    return;
+  }
+
+  for (const juego of lista) {
+    contenedor.appendChild(crearTarjeta(juego));
+  }
+}
+
+function filtrarJuegos() {
+  const texto = buscador.value.trim().toLowerCase();
+  const plataformaElegida = filtroPlataforma.value;
+
+  const resultado = juegos.filter((juego) => {
+    const coincideTitulo = juego.titulo.toLowerCase().includes(texto);
+    const coincidePlataforma =
+      plataformaElegida === "Todas" || juego.plataforma.includes(plataformaElegida);
+    return coincideTitulo && coincidePlataforma;
+  });
+
+  mostrarJuegos(resultado);
+}
+
+buscador.addEventListener("input", filtrarJuegos);
+filtroPlataforma.addEventListener("change", filtrarJuegos);
+
+mostrarJuegos(juegos);

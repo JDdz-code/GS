@@ -13,6 +13,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap" rel="stylesheet" type="text/css">
     <script src="./Js/catalogo.js" defer></script>
+    <script src="./Js/tema.js" defer></script>
 </head>
 
 <body>
@@ -22,12 +23,11 @@
             <a id="logo" href="index.html"><img src="./Imagenes/spawn_camp_logo_transparente.png" alt="logo SpawnCamp"
                     width="80px"></a>
             <ul>
-                <li><a href="./index.html">Inicio</a></li>
+                <li><a href="./index.html">Inicio</a></li>ñ
                 <li><a href="index.html#Catalogo">Catalogo</a></li>
                 <li><a href="ficha.html">Ficha</a></li>
                 <li><a href="contact_form.html">Contacto</a></li>
-                <li><a> <button id="dark_mode" type="button"></button></a></li>
-
+                <li><button id="dark_mode" type="button">Modo oscuro</button></li>
             </ul>
         </nav>
     </header>
@@ -88,26 +88,33 @@
                     </tr>
                     <tr>
                         <th scope="row">Última actualización</th>
-                        <td>202509-08</td>
+                        <td>2025-09-08</td>
                     </tr>
                 </tbody>
             </table>
         </section>
     </main>
 
-
     <h2 id="titulo2">Catalogo</h2>
     <hr class="linea_division">
 
-    <input type="text">
-    <select  id="Plataformas"></select>
-    <p></p>
-    <section id="Catalogo">
+    <input type="text" id="buscador" placeholder="Buscar por título...">
 
+    <select id="filtro-plataforma">
+        <option value="Todas">Todas</option>
+        <option value="SNES">SNES</option>
+        <option value="PlayStation">PlayStation</option>
+        <option value="Saturn">Saturn</option>
+        <option value="Nintendo 64">Nintendo 64</option>
+        <option value="Mega Drive">Mega Drive</option>
+        <option value="Arcade">Arcade</option>
+        <option value="Neo Geo">Neo Geo</option>
+        <option value="Game Boy">Game Boy</option>
+    </select>
 
+    <p id="contador"></p>
 
-    </section>
-
+    <section id="Catalogo"></section>
 
     <footer>SpawnCamp | Tu punto de encuentro gamer</footer>
 </body>
