@@ -22,6 +22,7 @@ header {
 
 body {
     width: 100%;
+    min-height: 100vh;
     background: linear-gradient(180deg, #0b1f14 0%, #111827 100%);
     background-attachment: fixed;
     color: #e5f5ea;
@@ -111,7 +112,7 @@ p.titulo_caja_catalogo{
   font-weight: bold;
 }
 main {
-    height: 800px;
+    min-height: 100%;
     width: 100%;
     /* padding-left: 2%;
     padding-right: 2%; */
@@ -209,7 +210,8 @@ table td {
 }
 
 #contact_form {
-    height: 800px;
+    min-height: 80vh;
+    height: auto;
     display: flex;
     justify-content: center;
     text-align: center;
@@ -310,6 +312,7 @@ textarea {
 /* Fondo general, texto y fuente */
 
 body.modo-claro {
+    min-height: 100vh;
     background: linear-gradient(180deg, #ffffff 0%, #f1fbf5 100%);
     color: #0f1f16;
     font-family: 'Share Tech Mono', 'Courier New', monospace;
