@@ -1,4 +1,4 @@
-
+// Lista de juegos del catálogo (precio sin IVA)
 const juegos = [
   {
     id: "RET-001",
@@ -51,7 +51,7 @@ const juegos = [
     plataforma: ["SNES", "Mega Drive", "Arcade"],
     precio: 39.00,
     valoracion: 9.9,
-    stock: 4,
+    stock: 2,
     imagen: "./Imagenes/img_caj5.png",
     descripcion: "Velocidad endiablada y los doce luchadores originales reunidos en el cartucho rey de los salones recreativos."
   },
@@ -90,23 +90,28 @@ const juegos = [
   }
 ];
 
+// Porcentaje de IVA que se aplica a todos los precios
 const TIPO_IVA = 21;
 
+// Devuelve el precio con IVA a partir del precio sin IVA
 function calculaPrecioConIva(precio) {
   return precio + (precio * TIPO_IVA / 100);
 }
 
+// Referencias a los elementos del HTML
+const contenedor = document.querySelector("#Catalogo");
 const buscador = document.querySelector("#buscador");
 const filtroPlataforma = document.querySelector("#filtro-plataforma");
 const contador = document.querySelector("#contador");
 
+// Crea y devuelve la tarjeta (article) de un juego
 function crearTarjeta(juego) {
   const tarjeta = document.createElement("article");
   tarjeta.classList.add("card_juegos");
 
   const titulo = document.createElement("p");
   titulo.textContent = juego.titulo;
-  titulo.classList.add('titulo_caja_catalogo');
+  titulo.classList.add("titulo_caja_catalogo");
 
   const imagen = document.createElement("img");
   imagen.src = juego.imagen;
@@ -116,24 +121,29 @@ function crearTarjeta(juego) {
   genero.textContent = juego.genero.join(" | ");
 
   const precio = document.createElement("p");
+  precio.classList.add("precio");
   precio.textContent = calculaPrecioConIva(juego.precio).toFixed(2) + "€";
 
   const valoracion = document.createElement("p");
+  valoracion.classList.add("valoracion");
   valoracion.textContent = "Nota:" + juego.valoracion;
 
   const stock = document.createElement("p");
   stock.classList.add("stock");
   stock.textContent = "Stock: " + juego.stock;
 
+  // Si quedan menos de 5 unidades, marca la tarjeta como stock bajo
   if (juego.stock < 5) {
     tarjeta.classList.add("stock-bajo");
   }
 
+  // Si no queda ninguna unidad, muestra "Agotado"
   if (juego.stock === 0) {
     stock.textContent = "Agotado";
   }
 
   const descripcion = document.createElement("p");
+  descripcion.classList.add("descripcion");
   descripcion.textContent = juego.descripcion;
 
   const btn_ver = document.createElement("button");
@@ -157,6 +167,7 @@ function crearTarjeta(juego) {
   return tarjeta;
 }
 
+// Borra el catálogo y pinta la lista recibida, con contador y mensaje de vacío
 function mostrarJuegos(lista) {
   contenedor.textContent = "";
 
@@ -174,6 +185,7 @@ function mostrarJuegos(lista) {
   }
 }
 
+// Filtra los juegos por título y plataforma a la vez, y los vuelve a pintar
 function filtrarJuegos() {
   const texto = buscador.value.trim().toLowerCase();
   const plataformaElegida = filtroPlataforma.value;
@@ -188,7 +200,9 @@ function filtrarJuegos() {
   mostrarJuegos(resultado);
 }
 
+// Cada vez que se escribe o se cambia el select, se vuelve a filtrar
 buscador.addEventListener("input", filtrarJuegos);
 filtroPlataforma.addEventListener("change", filtrarJuegos);
 
+// Al cargar la página se muestran todos los juegos
 mostrarJuegos(juegos);
