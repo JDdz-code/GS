@@ -117,18 +117,18 @@ function crearTarjeta(juego) {
   imagen.src = juego.imagen;
   imagen.alt = "Img " + juego.titulo;
 
-  const genero = document.createElement("h3");
+  const genero = document.createElement("h5");
   genero.textContent = juego.genero.join(" | ");
 
-  const precio = document.createElement("p");
+  const precio = document.createElement("h5");
   precio.classList.add("precio");
   precio.textContent = calculaPrecioConIva(juego.precio).toFixed(2) + "€";
 
-  const valoracion = document.createElement("p");
+  const valoracion = document.createElement("h5");
   valoracion.classList.add("valoracion");
   valoracion.textContent = "Nota:" + juego.valoracion;
 
-  const stock = document.createElement("p");
+  const stock = document.createElement("h5");
   stock.classList.add("stock");
   stock.textContent = "Stock: " + juego.stock;
 
@@ -148,9 +148,9 @@ function crearTarjeta(juego) {
 
   const btn_ver = document.createElement("button");
   btn_ver.classList.add("btn_vermas");
-  btn_ver.textContent = "Ver mas";
+  btn_ver.textContent = "Ver más";
 
-  const plataforma = document.createElement("p");
+  const plataforma = document.createElement("h5");
   plataforma.classList.add("plataforma");
   plataforma.textContent = juego.plataforma.join(", ");
 

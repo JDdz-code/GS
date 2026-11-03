@@ -22,12 +22,9 @@ header {
 
 body {
     width: 100%;
-    height: 100%;
     background: linear-gradient(180deg, #0b1f14 0%, #111827 100%);
     background-attachment: fixed;
     color: #e5f5ea;
-
-
     font-family: 'Share Tech Mono', 'Courier New', monospace;
 }
 
@@ -72,7 +69,6 @@ nav a:hover {
 
 .card_juegos:hover {
     background: rgba(74, 222, 128, 0.15);
-    color: #fff;
     border-radius: 6px;
 }
 
@@ -99,9 +95,14 @@ nav a:hover {
 }
 
 .card_juegos img {
-    width: 300px;
-    height: 120px;
-    object-fit: contain;
+    width: 250px;
+    height: 200px;
+    border: solid black 1px;
+
+}
+p.titulo_caja_catalogo{
+    font-weight: 800;
+    font-size: 20px;
 
 }
 
@@ -143,11 +144,12 @@ textarea {
 }
 
 footer {
+    background: linear-gradient(90deg, #0b2e1a 0%, #14532d 55%, #166534 100%);
     width: 100%;
     text-align: center;
     font-size: 25px;
     padding-top: 1rem;
-    border-bottom: #4ade80 2px solid;
+    border-top: #4ade80 2px solid;
 }
 
 footer p {
@@ -162,6 +164,7 @@ table {
     border: solid 2px #4ade80;
     /* height: 40%; */
     width: 30%;
+    border-collapse: collapse;
     /* margin-top: 5%;   */
 }
 
@@ -269,38 +272,169 @@ textarea {
     font-size: 20px;
 }
 
+
+#filtro-plataforma{
+     margin-left: 2px;
+    padding: 6px 8px;
+    width: fit-content;
+   
+    font-family: 'Share Tech Mono', 'Courier New', monospace;
+    color: #d1fae5;
+    background-color: #0b2e1a;
+    border: 2px solid #4ade80;
+    border-radius: 6px;
+
+}
+
+#buscador::placeholder {
+    color: #6fae88;
+}
+
+#buscador:focus {
+    border-color: #86efac;
+    box-shadow: 4px 4px 0 #166534;
+}
+
+
+#contador{
+    margin: 10px;
+    margin-left: 30px;
+}
 .info_juego h3 {
     color: #4ade80;
     margin-top: 24px;
 }
-/* Modo claro: sobrescribe los colores del tema oscuro */
+/* Modo claro */
+/* ===== MODO CLARO (verde) ===== */
+
+/* Fondo general, texto y fuente */
+
 body.modo-claro {
-  background-color: #f4f4f4;
-  color: #222;
+    background: linear-gradient(180deg, #ffffff 0%, #f1fbf5 100%);
+    color: #0f1f16;
+    font-family: 'Share Tech Mono', 'Courier New', monospace;
 }
 
-body.modo-claro header,
-body.modo-claro footer {
-  background-color: #e0e0e0;
-  color: #222;
+body.modo-claro header {
+    background: linear-gradient(90deg, #e4f3eb 0%, #ddfaeb 55%, #508a63 100%);
+    border-bottom: 3px solid #4ade80;
 }
+
 
 body.modo-claro a {
-  color: #0a4d8c;
+    color: #0f1f16;
 }
 
+body.modo-claro nav a:hover {
+
+    background-color: #baeecf91;
+    text-decoration: none;
+}
+
+button{
+    background-color: #4ade80;
+    color: #0f1f16;
+    border: 2px solid #006d2d;
+    border-radius: 6px;
+    cursor: pointer;
+}
+body.modo-claro button:hover{
+       background-color: #006d2d;
+    color: #ffffff;
+}
+ button:hover{
+    background-color: #006d2d;
+    color: #ffffff;
+}
+body.modo-claro table {
+    background-color: #e4f3eb;
+    border: solid 2px #006d2d;
+    border-collapse: collapse;
+}
+
+
+body.modo-claro button{
+    background-color: #4ade80;
+    color: #0f1f16;
+    border: 2px solid #006d2d;
+    border-radius: 6px;
+    cursor: pointer;
+}
 body.modo-claro .card_juegos {
-  background-color: #ffffff;
-  border-color: #999;
+    background-color: #f1fbf5;
+    border: 2px solid #006d2d;
+    border-radius: 10px;
+
 }
 
-body.modo-claro table th,
-body.modo-claro table td {
-  background-color: #ffffff;
-  color: #222;
-  border-color: #999;
+
+body.modo-claro .card_juegos:hover {
+    box-shadow: 12px 10px 0 #006d2d;
 }
 
+body.modo-claro .card_juegos:active {
+    box-shadow: 2px 2px 0 #006d2d;
+}
+
+.card_juegos {
+    box-shadow: 4px 4px 8px #006d2d;
+}
+
+
+.card_juegos:hover {
+    box-shadow: 8px 8px 0 #006d2d;
+}
+
+.card_juegos:active {
+    box-shadow: 2px 2px 10 #006d2d;
+}
+
+
+body.modo-claro footer {
+    background: linear-gradient(90deg, #508a63 0%, #ddfaeb 100%);
+    color: #0f1f16;
+    border-top: 3px solid #4ade80;
+}
+
+#buscador {
+    margin-left: 20px;
+    padding: 6px 8px;
+    width: 25%;
+   
+    font-family: 'Share Tech Mono', 'Courier New', monospace;
+    color: #d1fae5;
+    background-color: #0b2e1a;
+    border: 2px solid #4ade80;
+    border-radius: 6px;
+}
+body.modo-claro  #buscador {
+    margin-left: 20px;
+    padding: 6px 8px;
+    width: 25%;
+    font-family: 'Share Tech Mono', 'Courier New', monospace;
+    color: #000000;
+    background-color: #fff;
+    border: 2px solid #4ade80;
+    border-radius: 6px;
+}
+body.modo-claro #filtro-plataforma{
+    
+    margin-left: 2px;
+    padding: 6px 8px;
+    width: fit-content;
+   
+    font-family: 'Share Tech Mono', 'Courier New', monospace;
+    color: #000000;
+    background-color: #fff;
+    border: 2px solid #4ade80;
+    border-radius: 6px;
+}
+.descripcion {
+    margin: 8px;
+    text-align: center;
+    height: 60px;
+
+}
 @media (max-width: 1200px) {
     header {
         height: auto;
