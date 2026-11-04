@@ -146,7 +146,8 @@ function crearTarjeta(juego) {
   descripcion.classList.add("descripcion");
   descripcion.textContent = juego.descripcion;
 
-  const btn_ver = document.createElement("button");
+  const btn_ver = document.createElement("a");
+  btn_ver.href = "ficha.html";
   btn_ver.classList.add("btn_vermas");
   btn_ver.textContent = "Ver más";
 
