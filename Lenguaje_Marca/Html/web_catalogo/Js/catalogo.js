@@ -51,7 +51,7 @@ const juegos = [
     plataforma: ["SNES", "Mega Drive", "Arcade"],
     precio: 39.00,
     valoracion: 9.9,
-    stock: 2,
+    stock: 5,
     imagen: "./Imagenes/img_caj5.png",
     descripcion: "Velocidad endiablada y los doce luchadores originales reunidos en el cartucho rey de los salones recreativos."
   },

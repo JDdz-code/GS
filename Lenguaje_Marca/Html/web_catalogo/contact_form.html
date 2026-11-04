@@ -10,9 +10,8 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap" rel="stylesheet" type="text/css">
-    <script src="./Js/catalogo.js" defer></script>
-    <script src="./Js/modo_dark.js" defer></script>
-    <script src="./Js/form_contact.js" defer></script>
+    <script src="./Js/contacto.js" defer></script>
+    <script src="./Js/tema.js" defer></script>
 
   </head>
 
@@ -32,7 +31,7 @@
 
     <main>
       <section id="contact_form">
-        <form method="post">
+        <form method="post" novalidate>
           <h1>Contacto</h1>
 
           <fieldset>
@@ -40,20 +39,15 @@
 
             <label for="nombre">Nombre</label>
             <input type="text" id="nombre" name="nombre" placeholder="Tu nombre" required>
-            <span class="error-msg" id="errorNombre"></span>
-
-
-            <label for="numero">Número de teléfono</label>
-            <input type="tel" id="numero" name="numero" placeholder="678-901-234" required>
-            <span class="error-msg" id="errorNumero"></span>
 
             <label for="email">Correo electrónico</label>
             <input type="email" id="email" name="email" placeholder="correo@ejemplo.com" required>
-            <span class="error-msg" id="errorEmail"></span>
+
+            <label for="numero">Número de teléfono</label>
+            <input type="tel" id="numero" name="numero" placeholder="678-901-234" required>
 
             <label for="mensaje">Mensaje</label>
             <textarea id="mensaje" name="mensaje" rows="5" placeholder="Cuéntanos qué necesitas" required></textarea>
-            <span class="error-msg" id="errorMensaje"></span>
 
             <input type="submit" value="Enviar">
           </fieldset>

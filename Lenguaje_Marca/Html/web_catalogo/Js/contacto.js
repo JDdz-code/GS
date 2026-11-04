@@ -6,13 +6,13 @@ const telefono = document.querySelector("#numero");
 const mensaje = document.querySelector("#mensaje");
 
 // Contador bajo el textarea
-const contador = document.createElement("p");
-contador.textContent = "0 / 300 caracteres";
-mensaje.after(contador);
+const contadorMensaje = document.createElement("p");
+contadorMensaje.textContent = "0 / 300 caracteres";
+mensaje.after(contadorMensaje);
 
 // Actualiza el contador al escribir
 function actualizarContador() {
-  contador.textContent = mensaje.value.length + " / 300 caracteres";
+  contadorMensaje.textContent = mensaje.value.length + " / 300 caracteres";
 }
 
 // Borra los errores en pantalla
@@ -49,20 +49,20 @@ function validarFormulario(evento) {
     todoCorrecto = false;
   }
 
-  
-// expresion regular de para correos texto, una @, texto, un punto y texto
-const correo = email.value.trim();
-if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(correo)) {
-  mostrarError(email, "Escribe un correo válido, por ejemplo correo@ejemplo.com.");
-  todoCorrecto = false;
-}
+  // Expresión regular para un correo válido
+  const correo = email.value.trim();
+  if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(correo)) {
+    mostrarError(email, "Escribe un correo válido, por ejemplo correo@ejemplo.com.");
+    todoCorrecto = false;
+  }
 
-// Teléfono: 9 cifras que empiezan por 6, 7, 8 o 9 (formato español)
-const telefonoLimpio = telefono.value.replaceAll(" ", "").replaceAll("-", "");
-if (!/^[6-9]\d{8}$/.test(telefonoLimpio)) {
-  mostrarError(telefono, "Escribe un teléfono de 9 cifras.");
-  todoCorrecto = false;
-}
+  // Teléfono: 9 cifras que empiezan por 6, 7, 8 o 9 (formato español)
+  const telefonoLimpio = telefono.value.replaceAll(" ", "").replaceAll("-", "");
+  if (!/^[6-9]\d{8}$/.test(telefonoLimpio)) {
+    mostrarError(telefono, "Escribe un teléfono de 9 cifras.");
+    todoCorrecto = false;
+  }
+
   // Mensaje: entre 20 y 300 caracteres
   const largo = mensaje.value.trim().length;
   if (largo < 20 || largo > 300) {
@@ -107,5 +107,16 @@ function mostrarResumen() {
   actualizarContador();
 }
 
+// Quita el error de un campo en cuanto el usuario lo modifica
+function quitarErrorCampo(evento) {
+  const campo = evento.target;
+  campo.classList.remove("error");
+  const aviso = campo.nextElementSibling;
+  if (aviso && aviso.classList.contains("mensaje-error")) {
+    aviso.remove();
+  }
+}
+
 formulario.addEventListener("submit", validarFormulario);
+formulario.addEventListener("input", quitarErrorCampo);
 mensaje.addEventListener("input", actualizarContador);
