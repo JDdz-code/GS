@@ -1,0 +1,102 @@
+
+{
+"Tienda":[{
+    "nombre":"SpawnCamp",
+    "descripcion":"SpawnCamp es el refugio definitivo para los verdaderos amantes del píxel. Nos especializamos en la compra, venta & restauración de consolas clásicas, cartuchos descatalogados y accesorios retro desde la era de los 8 y 16 bits hasta los años 2000. Desde joyas por < 40 € hasta piezas de coleccionista por > 90 €, hay algo para cada bolsillo. Vive la edad de oro del videojuego con nosotros: preserva su historia y revive la nostalgia en su estado más puro."
+    ,"moneda":"&eur;"},
+
+    {
+        "Catalgo":[
+            {
+                "fechaActualizacion":"2025-09-08"
+            },
+                
+                {
+                    "Juegos":[{
+                    "id": "RET-001",
+                    "titulo": "Chrono Trigger",
+                    "genero": ["RPG", "Aventura"],
+                    "plataforma": ["SNES"],
+                    "precio": 35.99,
+                    "valoracion": 9.1,
+                    "stock": 11,
+                    "imagen": "./Imagenes/img_caj1.jpg",
+                    "descripcion": "Legendario RPG sobre viajes en el tiempo con diseños de Akira Toriyama. Conserva la caja original y el manual en perfecto estado."
+                },
+                {
+                    "id": "RET-002",
+                    "titulo": "Castlevania: Symphony of the Night",
+                    "genero": ["Acción", "Aventura", "Metroidvania"],
+                    "plataforma": ["PlayStation", "Saturn"],
+                    "precio": 41.9,
+                    "valoracion": 5.5,
+                    "stock": 7,
+                    "imagen": "./Imagenes/img_caj2.jpg",
+                    "descripcion": "La obra cumbre que definió un género entero dentro del castillo de Drácula. Edición Black Label completa en caja de metacrilato."
+                },
+                {
+                    "id": "RET-003",
+                    "titulo": "Super Mario World",
+                    "genero": ["Plataformas"],
+                    "plataforma": ["SNES"],
+                    "precio": 45.5,
+                    "valoracion": 9.6,
+                    "stock": 8,
+                    "imagen": "./Imagenes/img_caj3.jpg",
+                    "descripcion": "El clásico de plataformas de Mario y Yoshi con decenas de niveles y secretos por descubrir."
+                },
+                {
+                    "id": "RET-004",
+                    "titulo": "The Legend of Zelda: Ocarina of Time",
+                    "genero": ["Aventura", "Acción"],
+                    "plataforma": ["Nintendo 64"],
+                    "precio": 59.0,
+                    "valoracion": 9.2,
+                    "stock": 12,
+                    "imagen": "./Imagenes/img_caj4.JPG",
+                    "descripcion": "La transición al 3D que cambió la industria de los videojuegos para siempre. Incluye pila de salvado recién cambiada."
+                },
+                {
+                    "id": "RET-005",
+                    "titulo": "Street Fighter II Turbo",
+                    "genero": ["Lucha"],
+                    "plataforma": ["SNES", "Mega Drive", "Arcade"],
+                    "precio": 39.0,
+                    "valoracion": 9.9,
+                    "stock": 4,
+                    "imagen": "./Imagenes/img_caj5.png",
+                    "descripcion": "Velocidad endiablada y los doce luchadores originales reunidos en el cartucho rey de los salones recreativos."
+                },
+                {
+                    "id": "RET-006",
+                    "titulo": "Silent Hill",
+                    "genero": ["Terror", "Puzle"],
+                    "plataforma": ["PlayStation"],
+                    "precio": 99.0,
+                    "valoracion": 9.3,
+                    "stock": 12,
+                    "imagen": "./Imagenes/img_caj6.webp",
+                    "descripcion": "Terror psicológico envuelto en niebla, con puzles y una atmósfera inquietante que marcó un antes y un después."
+                },
+                {
+                    "id": "RET-007",
+                    "titulo": "Metal Slug: Super Vehicle-001",
+                    "genero": ["Acción", "Shooter"],
+                    "plataforma": ["Neo Geo", "Saturn", "PlayStation", "Arcade"],
+                    "precio": 39.0,
+                    "valoracion": 7.7,
+                    "stock": 0,
+                    "imagen": "./Imagenes/img_caj7.jpg",
+                    "descripcion": "Caos de disparos en 2D y animaciones pixel art hechas completamente a mano. Actualmente agotado, disponible bajo reserva."
+                },
+                {
+                    "id": "RET-008",
+                    "titulo": "Pokémon Edición Roja",
+                    "genero": ["RPG"],
+                    "plataforma": ["Game Boy"],
+                    "precio": 68.99,
+                    "valoracion": 9.4,
+                    "stock": 6,
+                    "imagen": "./Imagenes/img_caj8.jpg",
+                    "descripcion": "El fenómeno mundial donde empezó todo el viaje por la región de Kanto. Cartucho gris con pegatina original intacta."
+        }]}]}]}
