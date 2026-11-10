@@ -1,0 +1,29 @@
+<!ENTITY eur "EUR">
+
+<!ELEMENT Tienda (Nombre, Descripcion_Tienda, Monedas, Catalogo)>
+<!ATTLIST Tienda estilo CDATA #REQUIRED>
+
+<!ELEMENT Nombre (#PCDATA)>
+<!ELEMENT Descripcion_Tienda (#PCDATA)>
+
+<!ELEMENT Monedas EMPTY>
+<!ATTLIST Monedas Moneda CDATA #REQUIRED>
+
+<!ELEMENT Catalogo (Juego*)>
+<!ATTLIST Catalogo Fecha_actualizacion CDATA #REQUIRED>
+
+<!ELEMENT Juego (Titulo, Generos, Plataformas, Precio, Valoracion, Stock, Fecha, Descripcion?)>
+<!ATTLIST Juego
+    id ID #REQUIRED
+    comentario CDATA #IMPLIED>
+
+<!ELEMENT Titulo (#PCDATA)>
+<!ELEMENT Generos (Genero+)>
+<!ELEMENT Genero (#PCDATA)>
+<!ELEMENT Plataformas (Plataforma+)>
+<!ELEMENT Plataforma (#PCDATA)>
+<!ELEMENT Precio (#PCDATA)>
+<!ELEMENT Valoracion (#PCDATA)>
+<!ELEMENT Stock (#PCDATA)>
+<!ELEMENT Fecha (#PCDATA)>
+<!ELEMENT Descripcion (#PCDATA)>

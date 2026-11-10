@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE Tienda SYSTEM "RA4_Projecte_Fase_1_cataleg_deLeon_Jeuri.dtd">
+
+<!--
+    Catálogo de SpawnCamp: tienda de videojuegos y consolas retro.
+    Autor: Jeuri
+    Versión: 1.0
+-->
+<Tienda estilo="retro">
+        <Nombre>SpawnCamp</Nombre>
+        <Descripcion_Tienda>
+              <![CDATA[ SpawnCamp es el refugio definitivo para los verdaderos amantes del píxel.
+                Nos especializamos en la compra, venta & restauración de consolas clásicas,
+                cartuchos descatalogados y accesorios retro desde la era de los 8 y 16 bits hasta los años 2000.
+                Desde joyas por < 40 € hasta piezas de coleccionista por > 90 €, hay algo para cada bolsillo.
+                Vive la "edad de oro" del videojuego con nosotros: preserva su historia y revive la nostalgia en su estado más puro.]]>
+        </Descripcion_Tienda>
+          <!-- Moneda en la que están expresados todos los precios -->
+        <Monedas Moneda="&eur;"/>
+        
+         <!-- Formato de fechas: AAAA-MM-DD -->
+        <Catalogo Fecha_actualizacion="2025-09-08">
+            <Juego id="RET-001">
+                <Titulo>Chrono Trigger</Titulo>
+                <Generos>
+                    <Genero>RPG</Genero>
+                    <Genero>Aventura</Genero>
+                </Generos>
+                <Plataformas>
+                    <Plataforma>SNES</Plataforma>
+                </Plataformas>
+                <Precio>35.99</Precio>
+                <!-- Valoración del juego en base a 10 -->
+                <Valoracion>9.1</Valoracion>
+                <Stock>11</Stock>
+                <Fecha>1995-03-11</Fecha>
+                <Descripcion>Legendario RPG sobre viajes en el tiempo con diseños de Akira Toriyama. Conserva la caja original y el manual en perfecto estado.</Descripcion>
+            </Juego>
+        
+            <Juego id="RET-002" comentario="Obra maestra del metroidvania.">
+                <Titulo>Castlevania: Symphony of the Night</Titulo>
+                <Generos>
+                    <Genero>Acción</Genero>
+                    <Genero>Aventura</Genero>
+                    <Genero>Metroidvania</Genero>
+                </Generos>
+                <Plataformas>
+                    <Plataforma>PlayStation</Plataforma>
+                    <Plataforma>Saturn</Plataforma>
+                </Plataformas>
+                <Precio>41.90</Precio>
+                <Valoracion>5.5</Valoracion>
+                <Stock>7</Stock>
+                <Fecha>1997-03-20</Fecha>
+                <Descripcion>La obra cumbre que definió un género entero dentro del castillo de Drácula. Edición Black Label completa en caja de metacrilato.</Descripcion>
+            </Juego>
+
+            <Juego id="RET-003">
+                <Titulo>Super Mario World</Titulo>
+                <Generos>
+                    <Genero>Plataformas</Genero>
+                </Generos>
+                <Plataformas>
+                    <Plataforma>SNES</Plataforma>
+                </Plataformas>
+                <Precio>45.50</Precio>
+                <Valoracion>9.6</Valoracion>
+                <Stock>8</Stock>
+                <Fecha>1990-11-21</Fecha>
+            </Juego>
+        
+            <Juego id="RET-004">
+                <Titulo>The Legend of Zelda: Ocarina of Time</Titulo>
+                <Generos>
+                    <Genero>Aventura</Genero>
+                    <Genero>Acción</Genero> 
+                </Generos>
+                <Plataformas>
+                    <Plataforma>Nintendo 64</Plataforma>
+                </Plataformas>
+                <Precio>59.00</Precio>
+                <Valoracion>9.2</Valoracion>
+                <Stock>12</Stock>
+                <Fecha>1998-11-21</Fecha>
+                <Descripcion>La transición al 3D que cambió la industria de los videojuegos para siempre. Incluye pila de salvado recién cambiada.</Descripcion>
+            </Juego>
+                    
+            <Juego id="RET-005">
+                <Titulo>Street Fighter II Turbo</Titulo>
+                <Generos>
+                    <Genero>Lucha</Genero>
+                </Generos>
+                <Plataformas>
+                    <Plataforma>SNES</Plataforma>
+                    <Plataforma>Mega Drive</Plataforma>
+                    <Plataforma>Arcade</Plataforma>
+                </Plataformas>
+                <Precio>39.00</Precio>
+                <Valoracion>9.9</Valoracion>
+                <Stock>5</Stock>
+                <Fecha>1993-07-11</Fecha>
+                <Descripcion>Velocidad endiablada y los doce luchadores originales reunidos en el cartucho rey de los salones recreativos.</Descripcion>
+            </Juego>
+        
+            <Juego id="RET-006">
+                <Titulo>Silent Hill</Titulo>
+                <Generos>
+                    <Genero>Terror</Genero>
+                    <Genero>Puzle</Genero>
+                </Generos>
+                <Plataformas>
+                    <Plataforma>PlayStation</Plataforma>
+                </Plataformas>
+                <Precio>99.00</Precio>
+                <Valoracion>9.3</Valoracion>
+                <Stock>12</Stock>
+                <Fecha>1999-01-31</Fecha>
+            </Juego>
+
+            <Juego id="RET-007">
+                <Titulo>Metal Slug: Super Vehicle-001</Titulo>
+                <Generos>
+                    <Genero>Acción</Genero>
+                    <Genero>Shooter</Genero>
+                </Generos>
+                <Plataformas>
+                    <Plataforma>Neo Geo</Plataforma>
+                    <Plataforma>Saturn</Plataforma>
+                    <Plataforma>PlayStation</Plataforma>
+                    <Plataforma>Arcade</Plataforma>
+                </Plataformas>
+                <Precio>39.00</Precio>
+                <Valoracion>7.7</Valoracion>
+                <!-- stock 0 = agotado, disponible bajo reserva -->
+                <Stock>0</Stock>
+                <Fecha>1996-04-18</Fecha>
+                <Descripcion>Caos de disparos en 2D y animaciones pixel art hechas completamente a mano. Actualmente agotado, disponible bajo reserva.</Descripcion>
+            </Juego>
+            
+            <Juego id="RET-008">
+                <Titulo>Pokémon Edición Roja</Titulo>
+                <Generos>
+                    <Genero>RPG</Genero>
+                </Generos>
+                <Plataformas>
+                    <Plataforma>Game Boy</Plataforma>
+                </Plataformas>
+                <Precio>68.99</Precio>
+                <Valoracion>9.4</Valoracion>
+                <Stock>6</Stock>
+                <Fecha>1996-02-27</Fecha>
+                <Descripcion>El fenómeno mundial donde empezó todo el viaje por la región de Kanto. Cartucho gris con pegatina original intacta.</Descripcion>
+            </Juego>
+        
+        </Catalogo>
+
+</Tienda>
