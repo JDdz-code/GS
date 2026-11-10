@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <title>SpawnCamp</title>
+    <meta name="Autor" content="Jeuri de León">
+    <meta name="descripcion" content="Catálogo de videojuegos retro">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="./Css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap" rel="stylesheet" type="text/css">
+    <script src="./Js/catalogo.js" defer></script>
+    <script src="./Js/tema.js" defer></script>
+
+</head>
+
+<body>
+
+    <header>
+        <nav>
+            <a id="logo" href="index.html"><img src="./Imagenes/spawn_camp_logo_transparente.png" alt="logo SpawnCamp"
+                    width="80px"></a>
+            <ul>
+                <li><a href="./index.html">Inicio</a></li>
+                <li><a href="index.html#Catalogo">Catálogo</a></li>
+                <li><a href="ficha.html">Ficha</a></li>
+                <li><a href="contact_form.html">Contacto</a></li>
+                <li><button id="dark_mode" type="button">Modo claro</button></li>    </ul>
+        </nav>
+    </header>
+    <main>
+        <section id="blog">
+            <h1>SpawnCamp</h1>
+            <p> SpawnCamp es el refugio definitivo para los verdaderos amantes del píxel.
+                Nos especializamos en la compra, venta & restauración de consolas clásicas,
+                cartuchos descatalogados y accesorios retro desde la era de los 8 y 16 bits hasta los años 2000.
+                Desde joyas por &lt; 40 € hasta piezas de coleccionista por &gt; 90 €, hay algo para cada bolsillo.
+                Vive la "edad de oro" del videojuego con nosotros: preserva su historia y revive la nostalgia en su
+                estado más puro.
+                <br><br>
+            </p>
+        </section>
+
+
+        <section id="tabla_imagem">
+            <img id="img_tienda" src="./Imagenes/Img_Spanw_Camp.jpg" alt="Imagen de la tienda fisica." width="600px" height="600px">
+            <table>
+                <thead>
+                    <tr>
+                        <th colspan="2">Ficha de la tienda</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <th scope="row">Nombre</th>
+                        <td>SpawnCamp</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Estilo</th>
+                        <td>Retro</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Juegos en catálogo</th>
+                        <td>8</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Rango de precios</th>
+                        <td>35,99 € &ndash; 99,00 €</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Precio medio</th>
+                        <td>53,55 €</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Stock total</th>
+                        <td>61 unidades</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Agotados</th>
+                        <td>1 (Metal Slug)</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Época de los juegos</th>
+                        <td>1990 &ndash; 1999</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Última actualización</th>
+                        <td>2025-09-08</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+    </main>
+
+    <h2 id="titulo2">Catálogo</h2>
+    <hr class="linea_division">
+
+    <input type="text" id="buscador" placeholder="Buscar por título...">
+
+    <select id="filtro-plataforma">
+        <option value="Todas">Todas</option>
+        <option value="SNES">SNES</option>
+        <option value="PlayStation">PlayStation</option>
+        <option value="Saturn">Saturn</option>
+        <option value="Nintendo 64">Nintendo 64</option>
+        <option value="Mega Drive">Mega Drive</option>
+        <option value="Arcade">Arcade</option>
+        <option value="Neo Geo">Neo Geo</option>
+        <option value="Game Boy">Game Boy</option>
+    </select>
+
+    <p id="contador"></p>
+
+    <section id="Catalogo"></section>
+
+    <footer>SpawnCamp | Tu punto de encuentro gamer</footer>
+</body>
+
+
+</html>

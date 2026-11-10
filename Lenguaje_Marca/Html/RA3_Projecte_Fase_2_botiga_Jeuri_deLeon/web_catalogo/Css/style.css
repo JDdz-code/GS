@@ -1,0 +1,530 @@
+* {
+    margin: 0;
+    box-sizing: border-box;
+
+
+}
+
+header {
+    width: 100%;
+    height: 90px;
+    background: linear-gradient(90deg, #bed4c8 0%, #119e49 55%, #01240e 100%);
+    border-bottom: 3px solid #4ade80;
+    display: flex;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+
+
+
+body {
+    width: 100%;
+    min-height: 100vh;
+    background: linear-gradient(180deg, #0b1f14 0%, #111827 100%);
+    background-attachment: fixed;
+    color: #e5f5ea;
+    font-family: 'Share Tech Mono', 'Courier New', monospace;
+}
+
+
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 0 50px;
+    box-sizing: border-box;
+}
+
+#logo {
+    list-style: none;
+
+}
+
+nav ul {
+    display: flex;
+    gap: 40px;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav a {
+    color: azure;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 17px;
+    /* border: solid; */
+
+}
+
+nav a:hover {
+    background: rgba(255, 255, 255, 0.15);
+    color: #fff;
+    border-radius: 6px;
+}
+
+.card_juegos:hover {
+    background: rgba(74, 222, 128, 0.15);
+    border-radius: 6px;
+}
+
+
+#Catalogo {
+    margin-top: 45px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 40px;
+    /* padding-left: 2%;
+    padding-right: 2%; */
+    margin: 2%;
+
+}
+
+.card_juegos {
+    margin-top: 20px;
+    text-align: center;
+    height:fit-content;
+    border: #4ade8021 solid 1px;
+
+
+
+}
+
+.card_juegos img {
+    width: 250px;
+    height: 200px;
+    border: solid black 1px;
+
+}
+p.titulo_caja_catalogo{
+    font-weight: 800;
+    font-size: 20px;
+
+}
+
+.card_juegos.stock-bajo .stock {
+  color: red;
+  font-weight: bold;
+}
+main {
+    min-height: 100%;
+    width: 100%;
+    /* padding-left: 2%;
+    padding-right: 2%; */
+
+}
+
+#contact_form input,
+textarea {
+    margin-bottom: 1rem;
+}
+
+#blog {
+    width: 60%;
+}
+
+#blog h1 {
+    font-size: 45px;
+    padding-left: 80px;
+    padding-top: 50px;
+
+}
+
+
+
+#blog p {
+    padding-left: 80px;
+    padding-top: 7px;
+    font-size: 20px;
+
+}
+
+footer {
+    background: linear-gradient(90deg, #0b2e1a 0%, #14532d 55%, #166534 100%);
+    width: 100%;
+    text-align: center;
+    font-size: 25px;
+    padding-top: 1rem;
+    border-top: #4ade80 2px solid;
+}
+
+footer p {
+    margin: 4px 0;
+    font-size: 0.9rem;
+}
+
+table {
+    justify-content: center;
+    text-align: center;
+    background-color: #2a674579;
+    border: solid 2px #4ade80;
+    /* height: 40%; */
+    width: 30%;
+    border-collapse: collapse;
+    /* margin-top: 5%;   */
+}
+
+table th {
+    border: #119e49 solid 2px;
+    padding: 10px;
+}
+
+table td {
+    border: #119e49 solid 2px;
+    padding: 2px;
+}
+
+#tabla_imagem {
+    display: flex;
+    gap: 20px;
+    display: flex;
+    justify-content: center;
+}
+
+.titulo_caja_catalogo{
+ font-size: 21px;   
+}
+
+#img_tienda {
+    width: 60%;
+    height: 600px;
+    border: solid 3px #4ade80b6;
+
+}
+
+#titulo2 {
+    text-align: center;
+    font-size: 40px;
+    padding-top: 200px;
+}
+
+.linea_division {
+    border: solid #4ade80 2px;
+    margin: 2%;
+
+}
+
+#contact_form {
+    min-height: 80vh;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+}
+
+form {
+    width: 450px;
+
+}
+
+fieldset {
+    border: 1px solid #4ade80;
+    display: flex;
+    flex-direction: column;
+    border-radius: 8px;
+    padding: 15px;
+    text-align: left;
+
+
+}
+
+#contact_form legend {
+    padding: 0;
+    color: #4ade80;
+    text-align: left;
+}
+
+#contact_form input,
+textarea {
+    padding: 17px;
+    border-radius: 12px;
+    border: 3px solid #14532d;
+}
+
+#contact_form input[type="submit"] {
+    background: #14532d;
+    color: #fff;
+    cursor: pointer;
+}
+
+#contact_form input[type="submit"]:hover {
+    background: #22c55e;
+}
+
+.btn_vermas {
+    display: inline-block;
+    background: #22c55e;
+    color: #0b1f14;
+    text-decoration: none;
+    border-radius: 4px;
+    width: 100px;
+
+}
+
+.info_juego {
+    padding-left: 180px;
+    max-width: 1200px;
+    line-height: 1.6;
+    font-size: 20px;
+}
+
+
+#filtro-plataforma{
+     margin-left: 2px;
+    padding: 6px 8px;
+    width: fit-content;
+   
+    font-family: 'Share Tech Mono', 'Courier New', monospace;
+    color: #d1fae5;
+    background-color: #0b2e1a;
+    border: 2px solid #4ade80;
+    border-radius: 6px;
+
+}
+
+#buscador::placeholder {
+    color: #6fae88;
+}
+
+#buscador:focus {
+    border-color: #86efac;
+    box-shadow: 4px 4px 0 #166534;
+}
+
+
+#contador{
+    margin: 10px;
+    margin-left: 30px;
+}
+.info_juego h3 {
+    color: #4ade80;
+    margin-top: 24px;
+}
+/* Modo claro */
+/* ===== MODO CLARO (verde) ===== */
+
+/* Fondo general, texto y fuente */
+
+body.modo-claro {
+    min-height: 100vh;
+    background: linear-gradient(180deg, #ffffff 0%, #f1fbf5 100%);
+    color: #0f1f16;
+    font-family: 'Share Tech Mono', 'Courier New', monospace;
+}
+
+body.modo-claro header {
+    background: linear-gradient(90deg, #e4f3eb 0%, #ddfaeb 55%, #508a63 100%);
+    border-bottom: 3px solid #4ade80;
+}
+
+
+body.modo-claro a {
+    color: #0f1f16;
+}
+
+body.modo-claro nav a:hover {
+
+    background-color: #baeecf91;
+    text-decoration: none;
+}
+
+button{
+    background-color: #4ade80;
+    color: #0f1f16;
+    border: 2px solid #006d2d;
+    border-radius: 6px;
+    cursor: pointer;
+}
+body.modo-claro button:hover{
+       background-color: #006d2d;
+    color: #ffffff;
+}
+ button:hover{
+    background-color: #006d2d;
+    color: #ffffff;
+}
+body.modo-claro table {
+    background-color: #e4f3eb;
+    border: solid 2px #006d2d;
+    border-collapse: collapse;
+}
+
+
+body.modo-claro button{
+    background-color: #4ade80;
+    color: #0f1f16;
+    border: 2px solid #006d2d;
+    border-radius: 6px;
+    cursor: pointer;
+}
+body.modo-claro .card_juegos {
+    background-color: #f1fbf5;
+    border: 2px solid #006d2d;
+    border-radius: 10px;
+
+}
+
+
+body.modo-claro .card_juegos:hover {
+    box-shadow: 12px 10px 0 #006d2d;
+}
+
+body.modo-claro .card_juegos:active {
+    box-shadow: 2px 2px 0 #006d2d;
+}
+
+.card_juegos {
+    box-shadow: 4px 4px 8px #006d2d;
+}
+
+
+.card_juegos:hover {
+    box-shadow: 8px 8px 0 #006d2d;
+}
+
+.card_juegos:active {
+    box-shadow: 2px 2px 0 #006d2d;
+}
+
+/* Errores del formulario */
+#contact_form .error { border-color: #f87171; }
+.mensaje-error { color: #f87171; font-size: 0.9rem; margin-bottom: 1rem; }
+body.modo-claro #contact_form .error { border-color: #dc2626; }
+body.modo-claro .mensaje-error { color: #dc2626; }
+
+/* El resumen va debajo del formulario, no al lado */
+#contact_form { flex-direction: column; }
+
+/* Tarjeta de confirmación */
+#resumen { margin: 20px auto; padding: 20px; max-width: 450px; border: 2px solid #4ade80; border-radius: 10px; text-align: center; }
+body.modo-claro #resumen { border-color: #006d2d; background-color: #f1fbf5; }
+
+
+body.modo-claro footer {
+    background: linear-gradient(90deg, #508a63 0%, #ddfaeb 100%);
+    color: #0f1f16;
+    border-top: 3px solid #4ade80;
+}
+
+#buscador {
+    margin-left: 20px;
+    padding: 6px 8px;
+    width: 25%;
+   
+    font-family: 'Share Tech Mono', 'Courier New', monospace;
+    color: #d1fae5;
+    background-color: #0b2e1a;
+    border: 2px solid #4ade80;
+    border-radius: 6px;
+}
+body.modo-claro  #buscador {
+    margin-left: 20px;
+    padding: 6px 8px;
+    width: 25%;
+    font-family: 'Share Tech Mono', 'Courier New', monospace;
+    color: #000000;
+    background-color: #fff;
+    border: 2px solid #4ade80;
+    border-radius: 6px;
+}
+body.modo-claro #filtro-plataforma{
+    
+    margin-left: 2px;
+    padding: 6px 8px;
+    width: fit-content;
+   
+    font-family: 'Share Tech Mono', 'Courier New', monospace;
+    color: #000000;
+    background-color: #fff;
+    border: 2px solid #4ade80;
+    border-radius: 6px;
+}
+.descripcion {
+    margin: 8px;
+    text-align: center;
+    height: 60px;
+
+}
+@media (max-width: 1200px) {
+    header {
+        height: auto;
+        min-height: 90px;
+    }
+
+    nav ul {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 12px;
+    }
+
+    main {
+        height: auto;
+    }
+
+    #blog {
+        width: 100%;
+
+    }
+
+    #blog h1,
+    #blog p {
+        padding-left: 20px;
+        padding-right: 20px;
+
+    }
+
+    #blog h1 {
+        font-size: 34px;
+
+    }
+
+    #tabla_imagem {
+        flex-direction: column;
+        padding: 0 16px;
+
+    }
+
+    #img_tienda {
+
+        width: 100%;
+
+    }
+
+    #tabla_imagem table {
+
+        width: 100%;
+
+    }
+
+    #tabla_imagem iframe {
+        width: 100%;
+    }
+
+    #img_tienda {
+        height: auto;
+
+    }
+
+    #Catalogo {
+        grid-template-columns: 1fr;
+
+    }
+
+    #titulo2 {
+        padding-top: 80px;
+    }
+
+    .info_juego {
+        padding-right: 20px;
+        padding-left: 20px;
+        font-size: 17px;
+
+    }
+
+}
